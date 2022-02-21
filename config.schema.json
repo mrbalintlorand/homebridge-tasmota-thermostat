@@ -1,15 +1,29 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
-  "singular": true,
+  "pluginAlias": "TasmotaThermostat",
+  "pluginType": "accessory",
   "schema": {
     "type": "object",
     "properties": {
       "name": {
         "title": "Name",
         "type": "string",
-        "required": true,
-        "default": "Example Dynamic Platform"
+        "required": true
+      },
+      "mqtt": {
+        "title": "MQTT Config",
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "URL",
+            "type": "string",
+            "required": true
+          },
+          "thermostat_topic_name": {
+            "title": "Thermostat Topic Name",
+            "type": "string",
+            "required": true
+          }
+        }
       }
     }
   }
